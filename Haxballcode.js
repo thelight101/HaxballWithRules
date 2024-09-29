@@ -1,12 +1,12 @@
 var room = HBInit({
-    roomName: "Twitch Yayındayım Troll Oçlar Gelmesin",
-    maxPlayers: 40,
+    roomName: "Twitch Yayındayım Troll Gelmesin",
+    maxPlayers: 30,
     public: true,
     noPlayer: true
 });
 var Map = `{
 
-	"name" : "7v7 Eray",
+	"name" : "7v7 101",
 
 	"width" : 1500,
 
@@ -336,7 +336,7 @@ var playersThatTouchedTheBall = new Set();
 var sagofsaytkontrolplayerlist = [], solofsaytkontrolplayerlist = [];
 var lasttouchedplayer = room.getPlayerList()[0];
 var chatmessages = new Set();
-var izinlimesajlar = new Set(["https://www.twitch.tv/eraythehunter"]);
+var izinlimesajlar = new Set(["https://www.twitch.tv/thelight101"]);
 var admins = ["Eray"];
 let alttac = false, usttac = false, solustkorner = false
     , solaltkorner = false, sagustkorner = false, sagaltkorner = false
@@ -1088,7 +1088,7 @@ room.onTeamGoal = function (team) {
 }
 room.onPlayerChat = function (player, message) {
     if (chatmessages.has(message) && !izinlimesajlar.has(message) && !player.admin) {
-        room.kickPlayer(player.id, "Spam yapma oç", false);
+        room.kickPlayer(player.id, "Spam yapma kardeşim", false);
     }
     chatmessages.add(message);
     if (chatmessages.size > 6) {
